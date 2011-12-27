@@ -1,0 +1,18 @@
+This script is a simple bash script that checks the directory (and subdirectories) that it is
+run in and tries converting any ISO images to H.264 videos using Handbrake. You will need
+dirname installed on your machine along with HandBrakeCLI.
+
+WARNING: It WILL change the extensions of your .iso images to .osi. Comment the second to last
+line in the script if you do not want this to happen.
+
+Be sure to edit the script and change "/path/to/converted_movies" to whatever directory you
+want the converted files to be placed in. The script is written to create a folder in this
+directory with the name of the name of the directory the ISO image is found in. In the case
+of subdirectories, the directory name in the converted directory is created with the name of 
+the "root" directory and the filename the same as the source file, sans .iso extension. See below for an example.
+
+../Movie Name/A Subdirectory/Another Subdirectory/Example.iso
+
+will result in
+
+../path/to/converted_movies/Movie Name/Example.mp4
